@@ -233,10 +233,38 @@
        </section>
     </main>
 
-
+    <!--chat de Whatsapp-->
     <a target="_blanck" href="https://api.whatsapp.com/send?phone=573002514991&text=Hola!%20Por%20favor%20me%20puede%20ayudar?%20" class="appWhatsapp">
         <img src="./imgs/whatsapp.png" alt="Whatsapp">
     </a>
+
+    <!--chat de Facebook-messenger -->
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v7.0'
+        });
+      };
+
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="113322763727818"
+      logged_in_greeting="¡Hola! ¡Estamos encantados en conocerte, saber más de tus experiencias!"
+      logged_out_greeting="¡Hola! ¡Estamos encantados en conocerte, saber más de tus experiencias!">
+    </div>
+
     <!------Footer-->
     <footer class="footer">
         <div class="inner-footer">
