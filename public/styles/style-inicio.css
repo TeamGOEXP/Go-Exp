@@ -682,6 +682,18 @@ li i{
     font-size: 12px;
 }
 
+/*******diseño para los chat******/
+.appWhatsapp{
+    position: fixed;
+    right: 26px;
+    bottom: 100px;
+    width: 60px;
+    z-index: 1000;
+}
+.appWhatsapp img{
+    width: 100%;
+    height: auto;
+}
 
 @media screen and (max-width: 1000px){
     .footer-items{
