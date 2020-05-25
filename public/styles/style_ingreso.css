@@ -1,0 +1,149 @@
+:root
+{
+    --color-dark:#272a35;
+    --color-dark-xx:#1f231f;
+    --color-dark-x:#1f232b;
+    --color-light:#ffffff;
+    --color-grey:#f5f6f8;
+}
+
+body
+{
+    font-family:'Roboto', sans-serif;
+    font-size: 1,1rem;
+    font-weight: 300;
+    background-color: var(--color-dark);
+    color:var(--color-light);
+    letter-spacing: .05rem;
+    
+}
+
+.bg-light
+{
+    background-color: var(--color-light)!important;
+}
+
+.bg-dark
+{
+    background-color: var(--color-dark)!important;
+}
+
+.p-6
+{
+    padding: 4rem 7rem;
+}
+
+.contact-box
+{
+    padding: 20px;
+}
+
+.btn
+{
+    font-weight: 400;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    min-width: 10rem; 
+}
+
+.btn1 .btn
+{
+    background: rgb(69, 102, 165);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: block;
+    width: 120px;
+    height: 60px;
+    border:none;
+    color:#fff; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer; 
+    transition: 0.6s;
+    padding: 20px;
+}
+
+.btn-outline-dark
+{
+    border: 2px solid var(--color-dark-xx);
+    background-color: transparent !important;
+}
+
+.form-control
+{
+    background-color: var(--color-dark-xx);
+    border: 2px solid var(--color-dark-xx);
+    border-radius: .2rem;
+    padding: 1.4rem 1rem;
+}
+
+.ingreso-bg 
+{
+    background-image: url(../imgs/image13.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.testimonial
+{
+    bottom: 10px;
+}
+
+.testimonial h3
+{
+    color: black;
+}
+
+.curso{
+    background: rgb(69, 102, 165);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: block;
+    width: 120px;
+    height: 60px;
+    border:none;
+    color:#fff; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.login-link {
+    font-size: 12px;
+    color: #444;
+    display: block;
+    margin-top: 12px;
+
+    width: 167px;
+    height: 60px;
+    font-size: 16px;
+    margin: 15px auto;
+}
+
+@media (max-width:575.98px)
+{
+    .p-6
+    {
+        padding: 2rem;
+    }
+
+    .contact-box
+    {
+        padding: 0;
+    }
+
+    .width-100
+    {
+        width: 100%;
+    }
+}
+
+
+@media (max-width:900px)
+{
+    .register-bg
+    {
+        min-height: 50vh;
+    }
+}

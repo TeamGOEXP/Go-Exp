@@ -1,0 +1,862 @@
+:root
+{
+    --blue:#0779e4;
+    --black:#000000;
+    --white:#ffffff;
+    --green:#21bf73;
+    --espacios-contenido:45px;
+    --espacios: 10px;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: #fff;
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+/** Menu de navegacion **/
+
+#header
+{
+    position: relative;
+    width: 100%; 
+}
+
+.menu
+{
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    background: white;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    
+
+}
+
+.menu .logo-box
+{
+    height: 100%;
+    margin-left: 50px;
+}
+
+.menu .logo-box img
+{
+    object-fit: cover;
+    height: inherit;
+}
+
+.btn-menu> .fa-bars
+{
+    display: none;
+}
+
+.menu .list-container
+{
+    margin-top: 5px;
+}
+
+.menu .list-container .lists
+{
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    float: right;
+}
+
+.menu .list-container .lists li
+{
+    list-style: none;
+}
+
+.menu .list-container .lists li a
+{
+   
+    color: var(--black);
+    display: inline-block;
+    margin: 0px 10px;
+    padding: 8px;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 24px;
+ 
+}
+
+.menu .list-container .lists a:hover
+{
+    background:var(--blue);
+    color:#fff;
+}
+
+
+
+.menu .list-container .lists a.activo
+{
+    background:var(--blue);
+    color:#fff;
+}
+
+/*Img del navegación*/
+
+.img-header
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/image8.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-header .welcome
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-header .welcome h1
+{
+    font-size: 50px;
+    color:#fff;
+    font-weight: 200;
+}
+
+.img-header .welcome hr
+{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    margin-top: 5px;
+    border:none;
+}
+
+.img-header .welcome p
+{
+    font-size: 20px;
+    color:#fff;
+    margin-top: 20px;
+}
+
+
+.img-header .welcome a{
+    margin: 50px;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.2s;
+    font-family: 'Raleway', sans-serif;
+    
+}
+.img-header .welcome a:hover{
+    color: var(--white);
+    background: #6190E8;
+    transition-delay: 1s;
+    box-shadow: 0 0 10px #6190E8, 0 0 40px #6190E8, 0 0 80px #6190E8;
+    
+}
+.img-header .welcome a span{
+    position: absolute;
+    display: block;
+}
+.img-header .welcome a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent, #6190E8);
+}
+header .textos a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+header .textos a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent, #6190E8);
+}
+header .textos a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.img-header .welcome a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent, #6190E8);
+}
+v.img-header .welcome a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.img-header .welcome a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent, #6190E8);
+}
+.img-header .welcome a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+/*Acerca de nosotros*/
+
+.acerca-de
+{
+    width: 100%;
+    margin-top: 120px;
+}
+
+.acerca-de .info-container
+{
+    width: 80%;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.acerca-de .info-container h1
+{
+    font-size: 50px;
+    font-weight: 400;
+    color:var(--black);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.acerca-de .info-container p
+{
+    text-align: center;
+    font-size: 18px;
+    color: var(--black);
+    line-height: 35px;
+    margin: 10px 0px;
+}
+
+.acerca-de .info-container .about-galeria
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;    
+}
+
+.acerca-de .info-container .about-galeria img
+{
+    width: calc(33.33% -10px);
+    height: 200px;
+    object-fit: cover;
+    margin:10px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.acerca-de .info-container .about-more
+{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+.acerca-de .info-container .about-more button
+{
+    width: 120px;
+    height: 40px;
+    background: var(--blue);
+    border-radius: 24px;
+    border:none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top:20px;
+    cursor:pointer;
+    transition: 0.3s;
+}
+
+.acerca-de .info-container .about-more button:hover
+{
+    background: var(--green);
+}
+
+
+/*Se crea los estilos de los servicios*/
+
+.our-project
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+    background-image: url(../imgs/image9.jpg);
+}
+
+.our-project .deg-background
+{
+    position: relative;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.our-project .ejeZproject
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.our-project .container-project
+{
+    width: 90%;
+    margin:auto;
+    padding-top:90px;
+}
+
+.our-project .container-project .project-title
+{
+    border:2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.our-project .container-project .project-title h2
+{
+    font-size: 40px;
+    color:#fff;
+    font-weight: normal;
+}
+
+.our-project .container-project .project-title hr
+{
+    background-color: #fff;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.our-project .container-project .botones-work{
+   
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+  
+.our-project .container-project .botones-work li{
+    display: inline-block;
+    text-align: center;
+    margin-left: var(--espacios);
+    margin-bottom: var(--espacios-contenido);
+    padding: 6px 12px;
+    border: 1px solid var(--white);
+    list-style: none;
+    color: var(--white);
+}
+  
+.our-project .container-project .botones-work li:hover{
+    background: var(--blue);
+    color:#fff;
+    cursor: pointer;
+}
+  
+.our-project .container-project .botones-work .active{
+    background: var(--blue);
+    color:#fff;
+}
+  
+.our-project .container-project .galeria-work{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+  
+.our-project .container-project .galeria-work .cont-work{
+    width: 31%;
+    height:300px;
+    overflow: hidden;
+}
+  
+.our-project .container-project .galeria-work .cont-work .img-work{
+    height: 90%;
+    width: 100%;
+    
+}
+  
+.our-project .container-project .galeria-work .cont-work .img-work img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+  
+  
+
+
+/*Se crea los estilos de los testimonios*/
+
+.testimonios
+{
+    width: 100%;
+    margin-top:120px;
+}
+
+.testimonios .testimonio-title
+{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.testimonios .testimonio-title h2
+{
+    font-size: 30px;
+    color:var(--black);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.testimonios .testimonio-title hr
+{
+   width: 60%;
+   margin:auto;
+   height: 2px;
+   background: var(--black);
+   border: none; 
+}
+
+.testimonios .box-testimonios
+{
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonios .box-testimonios .card-testimonios
+{
+    width: 45%;
+    margin:20px;
+}
+
+.testimonios .box-testimonios .card-testimonios .card-img
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonios .box-testimonios .card-testimonios .card-img img
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 40%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.testimonios .box-testimonios .card-testimonios .testimonio-text
+{
+    width: 100%;
+    border:2px solid var(--blue);
+    padding: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 200ms;
+    margin-top: 30px;
+}
+
+.testimonios .box-testimonios .card-testimonios .testimonio-text h4
+{
+    color:var(--blue);
+    font-weight: normal;
+    font-size: 27px;
+    text-align: center; 
+    margin-bottom: 20px; 
+    transition: 200ms;
+}
+
+.testimonios .box-testimonios .card-testimonios .testimonio-text p
+{
+    font-size: 20px;
+    color:var(--black);
+    text-align: center;
+    line-height: 35px;
+    transition: 200ms;
+}
+
+.testimonios .box-testimonios .card-testimonios .testimonio-text:hover
+{
+    border:2px solid var(--green);
+}
+
+.testimonios .box-testimonios .card-testimonios .testimonio-text:hover h4
+{
+    color: var(--green);
+}
+
+/*Se crea la flecha*/
+
+.go-top
+{
+    position: fixed;
+    bottom: 40px;
+    left: -100%;
+    width: 50px;
+    height: 50px;
+    border:2px solid var(--blue);
+    background: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 400ms; 
+}
+
+.go-to > span
+{
+    font-size: 30px;
+    color: var(--black);
+}
+
+.go-to:hover span
+{
+   color: var(--white); 
+}
+
+.go-top:hover
+{
+    border:2px solid var(--white);
+    background:var(--blue);
+}
+
+
+/*Se crea el footer*/
+
+.footer{
+    width: 100%;
+    background: #00121b;
+    display: block;
+}
+
+.inner-footer{
+    width: 95%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.footer-items{
+    width: 25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.footer h1{
+    padding: 10px 0;
+    font-size: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer-items p{
+    color: grey;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer h2{
+    margin: 10px 0;
+    color: grey;
+    font-size: 16px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+.border{
+    height: 2px;
+    width: 130px;
+    background: #6190E8;
+}
+
+ul{
+    list-style: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+ul a{
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    transition: 0.3s;
+    font-family: 'Raleway', sans-serif;
+}
+ul a:hover{
+    color: #6190E8;
+}
+ul li{
+    margin: 10px 0;
+    height: 25px;
+}
+
+li i{
+    margin-right: 20px;
+}
+
+.social-media{
+    width: 100%;
+    color: #fff;
+    text-align: left;
+    height: 70px;
+}
+.social-media a{
+    text-decoration: none;
+}
+.social-media i{
+    height: 100px;
+    width: 30px;
+    margin: 20px 5px;
+    padding: 10px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer-bottom{
+    padding: 10px;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 1000px){
+    .footer-items{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 600px){
+    .footer-items{
+        width: 100%;
+    }
+}
+
+
+
+/*Se crean los media Screen */
+
+@media only screen and (max-width:1000px)
+{
+    .btn-menu > .fa-bars
+    {
+        display: block;
+        position: absolute;
+        top:20px;
+        font-size: 28px;
+        right: 30px;
+        cursor: pointer;
+    }
+
+    .btn-menu > .fa-bars:hover
+    {
+        color: var(--blue);
+    }
+
+    .btn-menu > .fa-times
+    {
+        color: var(--blue);
+    }
+
+    .menu .list-container
+    {
+        position: absolute;
+        top: 55px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: var(--blue);
+        color: var(--white);
+    }
+
+    .menu .list-container .lists
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 5px solid var(--blue);
+    }
+
+    .menu .list-container .lists li
+    {
+        width: 90%;
+        margin: 15px 0px;
+        border-bottom: 1px solid var(--blue);
+        text-align: center;
+        padding: -15px;
+    }
+
+    .menu .list-container .lists li a.activo
+    {
+        background: var(--white);
+        color:var(--blue);
+    }
+
+    .menu .list-container .lists li a:hover
+    {
+        background: var(--white);
+        color:var(--black);
+    }
+
+    .menu .list-container .lists li a
+    {
+        font-size: 16px;
+        
+    }
+}
+
+@media only screen and (max-width:900px)
+{
+    /*img header*/
+
+    .img-header .welcome h1
+    {
+        font-size: 40px;
+    }
+
+    .img-header .welcome > button
+    {
+        width: 130px;
+        font-size: 20px;
+    }
+
+    /*Acerca de nosotros*/
+
+    .acerca-de .info-container .about-galeria
+    {
+        flex-direction: column;
+    }
+
+    .acerca-de .info-container img
+    {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width:580px)
+{
+    /*img header*/
+
+    .img-header .welcome h1
+    {
+        font-size: 30px;
+    }
+
+    .img-header .welcome hr
+    {
+        width: 100px;
+    }
+
+    .img-header .welcome p
+    {
+        font-size: 18px;
+    }
+
+    .img-header .welcome > button
+    {
+        width: 100px;
+        font-size: 17px;
+    }
+
+}
+
+@media only screen and (max-width:850px)
+{
+    .testimonios .box-testimonios .card-testimonios .card-img img
+    {
+        width: 200px;
+        height: 200px;
+    }
+
+    .testimonios .box-testimonios .card-testimonios
+    {
+        width: 100%;
+    }
+
+    .testimonios .box-testimonios .card-testimonios .testimonio-text h4
+    {
+        font-size: 27px;
+    }
+
+    .testimonios .box-testimonios .testimonio-text p
+    {
+        font-size: 17px;
+        line-height: 35px;
+    }
+
+}
+
+@media screen and (max-width: 560px){
+  
+    .our-project .container-project .galeria-work .cont-work{
+      width: 85%;
+    }
+  
+}
+
