@@ -1,296 +1,65 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <title>GoExp | Inicio</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./imgs/logo.png">
-    <!---Estilos-->
-    <link rel="stylesheet" href="styles/style-inicio.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-----Opcion para ir hacia arriba-->
-    <div class="go-top">
-        <span><i class="fas fa-angle-up"></i></span>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.14.5/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.14.5/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.14.5/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.14.5/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.14.5/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
-    
-    <!---Menú de navegación-->
-    <header id="header">
-        <nav class="menu">
-            <div class="logo-box">
-                <img src="./imgs/logo.png"  alt="">
-                <span class="btn-menu"><i class="fas fa-bars"></i></span>
-            </div> 
-            <div class="list-container">
-                <ul class="lists">
-                    <li><a href="#" id="enlace-inicio" class="activo">Inicio</a></li>
-                    <li><a href="#" id="enlace-equipo" class="btn-header">Nosotros</a></li>
-                    <li><a href="#" id="enlace-servicio" class="btn-header">Experiencias</a></li>
-                    <li><a href="#" id="enlace-trabajo" class="btn-header" >Testimonios</a></li>
-                    <li><a href="contacto.html" class="btn-header">Contacto</a></li>
-                    <li><a href="ingreso.html" class="btn-header">Ingresar</a></li>
-                    <li><a href="registro.html"  class="btn-header">Regístrate</a></li>
-                </ul>
-            </div>
-        </nav>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-        <!----Img header-->
-        <div class="img-header">
-            <div class="welcome">
-                <h1>Bienvenidos a GoExp</h1>
-                <hr>
-                <p>¡ conecta tú experiencia con el mundo !</p>
-                <a href="./registro.html">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    EMPIEZA
-                </a>
-            </div>
-        </div>
-    </header>
-    <main>
-        
-        <!-----Acerca de nostros-->
-       <section class="acerca-de" id="equipo" >
-           <div class="info-container">
-               <h1>Acerca de nosotros</h1>
-               <p>Tenemos un alcance a nivel mundial, con el potencial de llegar a cualquier lugar que tenga una conexión a internet. Compartiendo la información y la posiblidad de aprender y generar experiencias de personas de cualquier posición social.</p>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-               <div class="about-galeria">
-                   <img src="imgs/image1.jpg" alt="">
-                   <img src="imgs/image2.jpg" alt="">
-                   <img src="imgs/image3.jpg" alt="">
-               </div>
-              <!-- <div class="about-more"><button>Leer más</button></div>-->
-            </div>
-       </section>
-
-       <!------------Nuestros servicios-->
-       <section class="our-project" id="servicio">
-           <div class="deg-background">
-           <div class="ejeZproject">
-               <div class="container-project">
-                   <div class="project-title">
-                       <h2>Nuestras Experiencias</h2>
-                       <hr>
-                   </div>
-
-                   <div class="botones-work">
-                        <ul>
-                            <li class="filter active" data-nombre='todos'>Todos</li>
-                            <li class="filter" data-nombre='aventura'>Aventura</li>
-                            <li class="filter" data-nombre='deporte'>Deporte</li>
-                            <li class="filter" data-nombre='cultura'>Cultura e Historia</li>
-                            <li class="filter" data-nombre='bienestar'>Bienestar</li>
-                            <li class="filter" data-nombre='gastronomia'>Gastronomia</li>
-                        </ul>
-                    </div>
-                    <div class="galeria-work">
-                        <div class="cont-work deporte">
-                            <div class="img-work">
-                                <img src="./imgs/image5.jpg" alt="">
-                            </div>
-                            
-                        </div>
-                  
-                        <div class="cont-work deporte">
-                            <div class="img-work">
-                                <img src="./imgs/image16.jpg" alt="">
-                            </div>
-                        
-                        </div>
-
-                        <div class="cont-work deporte">
-                            <div class="img-work">
-                                <img src="./imgs/image17.jpg" alt="">
-                            </div>
-                        
-                        </div>
-
-                        <div class="cont-work aventura">
-                            <div class="img-work">
-                                <img src="./imgs/image7.jpg" alt="">
-                            </div>
-                            
-                        </div>
-                        <div class="cont-work aventura">
-                            <div class="img-work">
-                                <img src="./imgs/image4.jpg" alt="">
-                            </div>
-                            
-                        </div>
-
-                        <div class="cont-work aventura">
-                            <div class="img-work">
-                                <img src="./imgs/image12.jpg" alt="">
-                            </div>
-                            
-                        </div>
-                        <div class="cont-work cultura">
-                            <div class="img-work">
-                                <img src="./imgs/image6.jpg" alt="">
-                            </div>
-                            
-                        </div>
-                        <div class="cont-work cultura">
-                            <div class="img-work">
-                                <img src="./imgs/image19.jpg" alt="">
-                            </div>
-                        
-                        </div>
-
-                        <div class="cont-work cultura">
-                            <div class="img-work">
-                                <img src="./imgs/image18.jpg" alt="">
-                            </div>
-                        
-                        </div>
-
-                        <div class="cont-work bienestar">
-                            <div class="img-work">
-                                <img src="./imgs/image10.jpg" alt="">
-                            </div>
-                        
-                        </div>
-
-                        <div class="cont-work bienestar">
-                            <div class="img-work">
-                                <img src="./imgs/image21.jpg" alt="">
-                            </div>
-                        
-                        </div>
-
-                        <div class="cont-work bienestar">
-                            <div class="img-work">
-                                <img src="./imgs/image20.jpg" alt="">
-                            </div>
-                        
-                        </div>
-
-                        <div class="cont-work gastronomia">
-                            <div class="img-work">
-                                <img src="./imgs/image24.jpg" alt="">
-                            </div>
-                        
-                        </div>
-
-                        <div class="cont-work gastronomia">
-                            <div class="img-work">
-                                <img src="./imgs/image22.jpg" alt="">
-                            </div>
-                        
-                        </div>
-
-                        <div class="cont-work gastronomia">
-                            <div class="img-work">
-                                <img src="./imgs/image23.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-               </div>
-            </div>
-           </div>
-       </section>
-
-       <!-------Testimonios-->
-       <section class="testimonios" id="trabajo">
-           <div class="testimonio-title">
-               <h2>Testimonios</h2>
-               <hr>
-           </div>
-
-           <div class="box-testimonios">
-               <div class="card-testimonios">
-                   <div class="card-img"><img src="imgs/t1.jpg" alt=""></div>
-
-                   <div class="testimonio-text">
-                       <h4>Cristian Betancur Martínez</h4>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat dolorem dolores exercitationem, voluptas velit enim soluta impedit, inventore quidem natus aut necessitatibus! Nam numquam eum aspernatur possimus quae ut.</p>
-                    </div>
-               </div>
-
-               <div class="card-testimonios">
-                    <div class="card-img"><img src="imgs/t2.jpg" alt=""></div>
-
-                    <div class="testimonio-text">
-                        <h4>Maria José Martínez</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat dolorem dolores exercitationem, voluptas velit enim soluta impedit, inventore quidem natus aut necessitatibus! Nam numquam eum aspernatur possimus quae ut.</p>
-                    </div>
-                </div>
-
-                <div class="card-testimonios">
-                    <div class="card-img"><img src="imgs/t3.jpg" alt=""></div>
-
-                    <div class="testimonio-text">
-                        <h4>Jonathan Andrés Blandón Ruiz</h4>
-                        <p>Solía pasarme que en algunos momentos generaba alguna experiencia o habilidad, pero siempre se me venía esa motivación de compartirlos con los demás pero no tenía una herramienta o la posiblidad de hacerlo. Pero le agradezco tanto a la comunidad de GoExp por la gran ayuda que me brindaron por que ya hoy en día muchas personas quieren aprender más sobre mi experiencia y eso me alegra tanto ya que mi idea principal es enseñar y compartir con los demás.</p>
-                    </div>
-                </div>
-           </div>
-       </section>
-    </main>
-
-
-    <!------Footer-->
-    <footer class="footer">
-        <div class="inner-footer">
-            <div class="footer-items">
-                <h1>Quiénes somos</h1>
-                <p>
-                    Somos una plataforma digital dedicada a la generación y creación de experiencias seguras de alta calidad.
-                </p>
-            </div>
-            <div class="footer-items">
-                <h2>Links</h2>
-                <div class="border"></div>
-                <ul>
-                    <a href="index.html"><li>Inicio</li></a>
-                    <a href=""><li>Nosotros</li></a>
-                    <a href=""><li>Experiencias</li></a>
-                    <a href=""><li>Testimonios</li></a>
-                    <a href="contacto.html"><li>Contacto</li></a>
-                    <a href="ingreso.html"><li>Ingresar</li></a>
-                    <a href="registro.html"><li>Regístrate</li></a>
-                </ul>
-            </div>
-            <div class="footer-items">
-                <h2>Servicios</h2>
-                <div class="border"></div>
-                <ul>
-                    <a href=""><li>Tutoriales</li></a>
-                    <a href=""><li>Cursos</li></a>
-                    <a href=""><li>Documentos</li></a>
-                </ul>
-            </div>
-            <div class="footer-items">
-                <h2>Contáctenos</h2>
-                <div class="border"></div>
-                <ul>
-                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>cll 62 #109a-120</li>
-                    <li><i class="fa fa-phone" aria-hidden="true"></i>3002514991</li>
-                    <li><i class="fa fa-envelope" aria-hidden="true"></i>contactogoexp@gmail.com</li>
-                </ul>
-                <div class="social-media">
-                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="https://instagram.com/goexperiencies?igshid=olr3741n4wi0"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="@conectamostuexperiencia"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                GOEXP &copy; 2019 All rights reserved.
-            </div>
-        </div>
-    </footer>
-
-    <!---Scripts-->
-    <script src="https://kit.fontawesome.com/b2a678bb78.js" crossorigin="anonymous"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/inicio.js"></script>
-    <script src="js/filtro.js"></script>
-
-</body>
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>
