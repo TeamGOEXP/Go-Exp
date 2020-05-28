@@ -97,7 +97,7 @@ if (isset($_POST["ingresar"]))
                         <br>
                         <button  type="submit" name="ingresar" class="curso width-100">Ingresar</button>
 
-                        <a class="login-link" href="registro.html">Lost your password?</a>
+                        <a class="login-link" href="">Lost your password?</a>
 
                     </form>
                     <br>
