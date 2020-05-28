@@ -1,3 +1,48 @@
+<?php
+
+    include ("./php/conexion.php");
+
+    session_start();
+    if (isset($_SESSION['id_usuario']))
+    {
+	    header("Location: home.php");
+    }
+    // Se hace el login
+
+// if(!empty($_POST))
+if (isset($_POST["ingresar"]))
+{
+	$usuario = mysqli_real_escape_string($conexion,$_POST['user']);
+	$assword = mysqli_real_escape_string($conexion,$_POST['pass']);
+
+	$password_encriptada = sha1($assword);
+
+	$sql = "SELECT idusuarios FROM  usuarios WHERE 
+	usuario = '$usuario' AND assword = '$password_encriptada' ";
+
+	$resultado = $conexion->query($sql);
+	$rows = $resultado->num_rows;
+
+	if ($rows > 0)
+	{
+		$row = $resultado->fetch_assoc();
+		$_SESSION['id_usuario'] = $row["idusuarios"];
+		header("Location: home.php");
+	}
+	else
+	{
+		echo "<script>
+		
+			alert('Usuario o Password incorrecto');
+			window.location = 'ingreso.php';
+
+		</script>";
+	}
+
+ }
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -37,20 +82,20 @@
                     </div>
                     <p class="text-muted mb-5">Ingresa la siguiente información para ingresar.</p>
 
-                    <form>
+                    <form action="<?php $_SERVER["PHP_SELF"]; ?>" method="POST" >
                     
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">Usuario<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Ingresa tu usuario"required>
+                            <input type="text" name="user" class="form-control" placeholder="Ingresa tu usuario"required>
                         </div>
 
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">Contraseña<span class="text-danger">*</span></label>
-                            <input type="password" class="form-control" placeholder="Ingresa tu contraseña"required>
+                            <input type="password"  name="pass" class="form-control" placeholder="Ingresa tu contraseña"required>
                         </div>
 
                         <br>
-                        <button  type="submit" class="curso width-100">Ingresar</button>
+                        <button  type="submit" name="ingresar" class="curso width-100">Ingresar</button>
 
                         <a class="login-link" href="registro.html">Lost your password?</a>
 

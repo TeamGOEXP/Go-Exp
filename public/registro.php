@@ -1,3 +1,61 @@
+
+<?php
+ include ("./php/conexion.php");
+
+ //Registro de Usuario
+ if (isset($_POST["registrar"]))
+ {
+	$nombre = mysqli_real_escape_string($conexion,$_POST['nombre']);
+	$correo = mysqli_real_escape_string($conexion,$_POST['correo']);
+	$usuario = mysqli_real_escape_string($conexion,$_POST['user']);
+	$assword = mysqli_real_escape_string($conexion,$_POST['pass']);
+
+	$password_encriptada = sha1($assword);
+
+	$sqluser = "SELECT idusuarios FROM usuarios
+					 WHERE usuario = '$usuario'";
+
+	$resultadouser = $conexion->query($sqluser);
+	$filas = $resultadouser->num_rows;
+
+	if ($filas > 0)
+	{
+		echo "<script>
+		
+			alert('el usuario ya existe');
+			window.location = 'registro.php';
+
+		</script>";
+	}
+	else
+	{
+		$sqlusuario = "INSERT INTO usuarios(NombreC,Correo,usuario,assword)
+		VALUES ('$nombre','$correo','$usuario','$password_encriptada')";
+	
+		$resultadousuario = $conexion->query($sqlusuario);
+		if ($resultadousuario > 0)
+		{
+			echo "<script>
+		
+			alert('Registro exitoso');
+			window.location = 'ingreso.php';
+
+			</script>";
+		}
+		else
+		{
+			echo "<script>
+		
+			alert('Error al registrarse');
+			window.location = 'registro.php';
+
+			</script>";
+		}
+	}
+ }
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -37,26 +95,31 @@
                     </div>
                     <p class="text-muted mb-5">Ingresa la siguiente información para registrarte.</p>
 
-                    <form>
+                    <form action="<?php $_SERVER["PHP_SELF"]; ?>" method="POST">
 
                         <div class="form-group col-mb-3">
                             <label class="font-weight-bold">Nombre completo<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Ingresa tu nombre completo" required>
+                            <input type="text" name="nombre" class="form-control" placeholder="Ingresa tu nombre completo" required>
                         </div>
 
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">Correo Electrónico<span class="text-danger">*</span></label>
-                            <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico"required>
+                            <input type="email" name="correo" class="form-control" placeholder="Ingresa tu correo electrónico"required>
                         </div>
 
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">Usuario<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Ingresa tu usuario"required>
+                            <input type="text" name="user" class="form-control" placeholder="Ingresa tu usuario"required>
                         </div>
 
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">Contraseña<span class="text-danger">*</span></label>
-                            <input type="password" class="form-control" placeholder="Ingresa tu contraseña"required>
+                            <input type="password" name="pass" class="form-control" placeholder="Ingresa tu contraseña"required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">Confirmación contraseña<span class="text-danger">*</span></label>
+                            <input type="password" name="passr" class="form-control" placeholder="Vuelva a ingresar tu contraseña"required>
                         </div>
 
                         <div class="form-group mb-5">
@@ -68,7 +131,7 @@
                             </div>
                         </div>
 
-                        <button  type="submit" class="curso width-100 btn2">Regístrate</button>
+                        <button  type="submit" name="registrar" class="curso width-100 btn2">Regístrate</button>
                      
 
                     </form>
@@ -88,5 +151,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+  
+
+</body>
 </html>
