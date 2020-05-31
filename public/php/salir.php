@@ -3,6 +3,6 @@
 session_start();
 session_destroy();
 
-header("Location: ../ingreso.php");
+header("Location: ../index.html");
 
 ?>

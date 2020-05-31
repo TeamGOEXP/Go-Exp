@@ -1,0 +1,315 @@
+:root{
+    --Nunito: 'Nunito', sans-serif;
+    --Abel: 'Abel', sans-serif;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: #E8E8E8;
+}
+
+header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: #6190E8;
+}
+
+header #button-menu{
+	font-size: 30px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.navegacion{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0%;
+	height: 100vh;
+	background: rgba(0,0,0,.0);
+
+}
+
+.navegacion ul{
+	width: 320px;
+	height: 100%;
+	background: #fff;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: -320px;
+	transition: left .3s;
+	font-family: var(--Abel);
+}
+
+.navegacion .menu li.title-menu{
+	padding: 20px;
+	background: #6190E8;
+	color: #fff;
+	text-align: center;
+	font-size: 22px;
+}
+
+.navegacion .menu a{
+	display: block;
+	padding: 20px;
+	border-bottom: 1px solid #C6D0DA;
+
+	font-size: 22px;
+	font-weight: 200;
+	text-decoration: none;
+	color: #6190E8;
+}
+
+.navegacion .menu a:hover{
+	background: #A7BFE8;
+	color: #fff;
+}
+
+.navegacion .menu li span.icon-menu{
+	margin-right: 12px;
+}
+
+.navegacion .menu .item-submenu > a::after{
+	font: normal normal normal 14px/1 FontAwesome;
+  	font-size: inherit;
+  	text-rendering: auto;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	content: '\f105';
+
+	float: right;
+	color: #C5C5C5;
+}
+
+/* Submenu ============*/
+.navegacion .submenu li.title-menu{
+	background: #fff;
+	color: #6190E8;
+}
+
+.navegacion .submenu li.go-back{
+	padding: 10px 20px;
+	background: #6190E8;
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.navegacion .submenu li.go-back::before{
+	font: normal normal normal 14px/1 FontAwesome;
+  	font-size: inherit;
+  	text-rendering: auto;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	content: '\f0d9';
+	margin-right: 10px;
+}
+
+/*****imagen principal con su contenido*****/
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.contenido-header {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenido-header>img {
+    width: 550px;
+    animation: ease-in animat 1s;
+}
+.contenido-header p {
+    font-weight: 100;
+    margin-top: 14px;
+	color: #5D6678;
+	font-family: var(--Abel);
+	font-size: 20px;
+}
+.contenido-header h1{
+	font-family: var(--Nunito);
+	font-size: 40px;
+}
+.contenido-header a {
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: inline-block;
+    background: #6190E8;
+    text-align: center;
+    color: #fff;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+	box-shadow: 0 8px 32px rgb(167, 191, 232);
+	font-family: var(--Abel);
+}
+
+/*****************de aca empieza los estilos de los sections**************/
+.info .contenedor{
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 0 80px 0;
+}
+
+.info .contenedor h2{
+	text-align: center;
+	justify-content: center;
+	font-family: var(--Nunito);
+	font-size: 50px;
+}
+.info .contenedor p{
+	text-align: center;
+	justify-content: center;
+	font-family: var(--Abel);
+	font-size: 20px;
+}
+
+.titulo{
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.info{
+    background: rgb(139, 175, 241);
+    color: #fff;
+}
+
+.questions {
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.questions>img {
+    width: 500px;
+}
+
+.textos-questions {
+    margin: 0 0 0 30px;
+}
+
+.textos-questions p {
+    font-weight: 50;
+    margin-top: 10px;
+	color: #5D6678;
+	font-family: var(--Abel);
+	font-size: 30px;
+}
+
+.textos-questions h1{
+	font-family: var(--Nunito);
+	font-size: 20px;
+}
+
+/**************equipo****************/
+.site-main .about-area .about-title p{
+    padding: 1rem 7rem;
+}
+
+.site-main .about-area .client{
+    background: #ffffff10;
+    box-shadow: var(--box-shadow);
+    margin: 3rem 0rem;
+}
+
+.site-main .about-area .client .client-img{
+    padding: 2rem;
+}
+
+.site-main .about-area .client .about-client{
+    padding-top: 2rem;
+}
+
+.site-main .about-area .client .about-client h4{
+    font: normal 500 21px/ 20px var(--roboto);
+}
+
+.site-main .about-area .client .about-client p{
+    font-size: 14px;
+}
+
+.site-main .about-area .owl-carousel .owl-item{
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span{
+    background: var(--primary-color);
+    width: 12px;
+    height: 12px;
+}
+
+/***********dejar responsive toda la pagina********/
+@media screen and (max-width: 320px){
+	.navegacion ul{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:800px){
+	.contenido-header {
+        flex-direction: column;
+        justify-content: space-evenly;
+		height: 720px;
+    }
+    .contenido-header>img {
+        width: 400px;
+    }
+    .textos-header {
+        margin: 0;
+	}
+	.contenido-header h1{
+		font-size: 20px;
+	}
+
+	/******sections*******/
+	.questions {
+        height: 720px;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .questions>img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:600px){
+	.contenido-header {
+        height: 650px;
+	}
+	.contenido-header a{
+		font-size: 15px;
+	}
+	.contenido-header>img {
+        width: 250px;
+	}
+	.contenido-header h1{
+		font-size: 30px;
+	}
+
+	/******sections******/
+	.questions>img {
+        width: 200px;
+    }
+}
