@@ -24,85 +24,72 @@ $row = $resultado->fetch_assoc();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>GOEXP | Hogar</title>
+	<link rel="shortcut icon" href="./imgs/logo.png">
+	<link rel="stylesheet" href="./styles/estilos-home.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="./styles/estilos-home.cs">
-
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<span id="button-menu" class="fa fa-bars"></span>
+	<input type="checkbox" id="check">
+	<label for="check">
+		<i class="fas fa-bars" id="btn"></i>
+		<i class="fas fa-times" id="cerrar"></i>
+	</label>
+	<div class="sidebar">
+		<header>Go Exp
+		<br>
+		<span class="user-info">
+			<small>Bienvenid@</small>
+			<br>
+			<!-- Mostrar Nombre del Usuario Logueado-->
+			<?php echo utf8_decode($row['NombreC']);?>	
+		</span>
 
-		<nav class="navegacion">
-			<ul class="menu">
+		</header>
 
-				<span class="user-info">
-					<small>Bienvenid@</small>
-					<!-- Mostrar Nombre del Usuario Logueado-->
-					<?php echo utf8_decode($row['NombreC']);?>	
-				</span>
-				<li><a href="#"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
+		<ul class="menu">
 
-				<li class="item-submenu" menu="1">
+			<li><a href="index.html"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
+			<li class="item-submenu" menu="1">
 					<a href="#"><span class="fa fa-suitcase icon-menu"></span>Servicios</a>
-					<ul class="submenu">
+					<!--<ul class="submenu">
 						<li class="title-menu"><span class="fa fa-suitcase icon-menu"></span>Servicios</li>
 						<li class="go-back">Atras</li>
 
 						<li><a href="#">Tutoriales</a></li>
 						<li><a href="#">Cursos</a></li>
 						<li><a href="#">Documentos</a></li>
-					</ul>
-				</li>
-				<!--
-				<li class="item-submenu" menu="2">
-					<a href="#"><span class="fa fa-shopping-bag icon-menu"></span>Tienda</a>
-					<ul class="submenu">
-						<li class="title-menu"><span class="fa fa-shopping-bag icon-menu"></span>Tienda</li>
-						<li class="go-back">Atras</li>
-
-						<li><a href="#">Laptops</a></li>
-						<li><a href="#">Smarphones</a></li>
-						<li><a href="#">Consolas de viejuegos</a></li>
-					</ul>
-				</li>
-				-->
-				<li><a href="#"><span class="fa fa-plus-circle icon-menu"></span>Crear experiencia</a></li>
-				<li><a href="#"><span class="fa fa-question-circle icon-menu"></span>Ayuda</a></li>
-				<li><a href="php/salir.php"><i class="ace-icon fa fa-power-off"></i>Salir</a></li>
-			</ul>
-		</nav>
-	</header>
-	
-	<!----------------------------contenido prinicipal de la pagina--------------------------->
-	<div class="contenedor">
-		<section class="contenido-header">
-			<section class="textos-header">
-				<h1>¡Conecta tú experiencia con el mundo!</h1>
-				<p>¿Quieres empezar a crear tú experiencia? es fácil, solo da clic en este botón</p>
-				<a href="#">CREAR</a>
-			</section>
-			
-		</section>
+					</ul>-->
+			</li>
+			<li><a href="#"><span class="fa fa-plus-circle icon-menu"></span>Crear experiencia</a></li>
+			<li><a href="#"><span class="fa fa-question-circle icon-menu"></span>Ayuda</a></li>
+			<li><a href="contacto.html"><span class="fa fa-envelope"></span>Contacto</a></li>
+			<li><a href="php/salir.php"><span class=" fa fa-power-off"></span>Salir</a></li>
+		</ul>
 	</div>
-
-	<main>
-		<!-------------------------empezamos los sections para todo el contenido que contendra esta pagina------------------>
-		<section class="info">
-        	<div class="contenedor">
-          	  	<h2 class="titulo left">Juntos podemos apoyar</h2>
-           		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        	</div>
-    	</section>
-		<section class="questions contenedor">
-        	<section class="textos-questions">
-				<p>"Ni la sociedad, ni el hombre, ni ninguna otra cosa deben sobrepasar para ser buenos los límites establecidos por la naturaleza."</p>
-            	<h1> - Hipócrates</h1>
-        	</section>
-        	
-        </section>
-	</main>
 	
+	<section>
+		<div class="img-header">
+            <div class="welcome">
+                <h1>Bienvenidos a GoExp</h1>
+                
+                <p>¡ conecta tú experiencia con el mundo !</p>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Crea tú experiencia
+                </a>
+            </div>
+        </div>
+	</section>
+
+	
+	
+	
+	<script src="js/jquery.js"></script>
+    <script src="js/main-home.js"></script>
 </body>
 </html>
