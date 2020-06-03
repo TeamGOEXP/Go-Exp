@@ -71,7 +71,7 @@ if (isset($_POST["ingresar"]))
             </div>
             <div class="col-xl-7 col-lg-12 d-flex">
                 <div class="container align-self-center p-6">
-                    <h1 class="font-weight-bold mb-3">Estás a un paso de empezar a general tus experiencias.</h1>
+                    <h1 class="font-weight-bold mb-3">Estás a un paso de empezar a generar tus experiencias.</h1>
                     <div class="form-group">
                         <button class="btn btn-outline-dark d-inline-block text-light mr-2-mb-3 width-100"><i class="icon ion-logo-google lead
                             align-middle mr-2" ></i >Google</button>

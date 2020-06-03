@@ -31,13 +31,15 @@ $row = $resultado->fetch_assoc();
 
 </head>
 <body>
+
+	
 	<input type="checkbox" id="check">
 	<label for="check">
 		<i class="fas fa-bars" id="btn"></i>
 		<i class="fas fa-times" id="cerrar"></i>
 	</label>
 	<div class="sidebar">
-		<header>Go Exp
+		<header>GoExp
 		<br>
 		<span class="user-info">
 			<small>Bienvenid@</small>
@@ -69,12 +71,13 @@ $row = $resultado->fetch_assoc();
 		</ul>
 	</div>
 	
-	<section>
+	
+	<section id="equipo">
 		<div class="img-header">
             <div class="welcome">
                 <h1>Bienvenidos a GoExp</h1>
                 
-                <p>¡ conecta tú experiencia con el mundo !</p>
+                <p>Es hora de empezar a crear tus experiencias</p>
                 <a href="#">
                     <span></span>
                     <span></span>
@@ -85,6 +88,59 @@ $row = $resultado->fetch_assoc();
             </div>
         </div>
 	</section>
+
+	
+
+	
+	<section class="holi">
+		<div class="info-container">
+			
+			<div class="project-title">
+                <h2>Experiencias Extremas</h2>
+                <hr>
+			</div>
+			
+			<div class="container">
+
+				<div class="card">
+					<img src="imgs/jumping jump.jpg">
+					<h4>Puenting</h4>
+					<p>	Se trata desde que el saltador salte desde una altura considerable atado con una cuerda elastica en los tobillos.</p>
+					
+				</div>
+				<div class="card">
+					<img src="imgs/lucha.jpg">
+					<h4>Lucha</h4>
+					<p>Los deportistas utilizan diferentes tecnicas y llaves para lograr que el rival caiga al suelo.</p>
+					   
+				</div>
+				<div class="card">
+					<img src="imgs/San Felix.jpg">
+					<h4>Parapentes</h4>
+					<p>Modalidad de paracaidismo deportivo que consiste en lanzarse desde una pendiente muy pronuncia con un paracaidas</p>
+					       
+				</div>
+				<div class="card">
+					<img src="imgs/bmx.jpg">
+					<h4>BMX</h4>
+					<p>Es una disciplina del ciclismo que se practica con una biclicleta cross con la modalidad de carrera y freestyle.</p>
+					
+				</div>                   
+				<div class="card">
+					<img src="imgs/skate.jpg">
+					<h4>skateboarding</h4>
+					<p>Deporte que se practica con una patineta haciendo piruetas y pruebas de habilidad en rampas y pistas.</p>
+					                          
+
+					
+				</div>
+
+			</div>
+							
+							
+		</div>
+	</section>
+    
 
 	
 	
